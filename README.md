@@ -117,6 +117,3 @@ doc-miner/
 - [ ] Schema-driven mode (specify which fields to extract)
 - [ ] Support for additional LLM providers
 
-## License
-
-MIT
