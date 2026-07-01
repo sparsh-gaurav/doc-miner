@@ -2,7 +2,7 @@ import pytest
 from unittest.mock import patch, MagicMock
 from pathlib import Path
 
-from docextract import extract, ExtractionResult
+from docminer import extract, ExtractionResult
 
 
 MOCK_FIELDS = {
@@ -24,8 +24,8 @@ def test_extract_pdf_success(tmp_path):
     dummy_pdf.write_bytes(b"%PDF-1.4 dummy")
 
     with (
-        patch("docextract.extractor._pdf_text", return_value="extracted text"),
-        patch("docextract.extractor._gemini_extract", return_value=MOCK_RESULT),
+        patch("docminer.extractor._pdf_text", return_value="extracted text"),
+        patch("docminer.extractor._gemini_extract", return_value=MOCK_RESULT),
     ):
         result = extract(dummy_pdf, api_key="test-key")
 
@@ -39,8 +39,8 @@ def test_extract_docx_success(tmp_path):
     dummy_docx.write_bytes(b"PK dummy docx")
 
     with (
-        patch("docextract.extractor._docx_text", return_value="extracted text"),
-        patch("docextract.extractor._gemini_extract", return_value=MOCK_RESULT),
+        patch("docminer.extractor._docx_text", return_value="extracted text"),
+        patch("docminer.extractor._gemini_extract", return_value=MOCK_RESULT),
     ):
         result = extract(dummy_docx, api_key="test-key")
 

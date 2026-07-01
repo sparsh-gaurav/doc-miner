@@ -1,11 +1,11 @@
-# docextract
+# doc-miner
 
 Extract structured key-value data from any PDF or Word document using a free LLM.
 
 No templates. No rules. Drop in a document — get back a clean JSON of everything important.
 
 ```python
-from docextract import extract
+from docminer import extract
 
 result = extract("invoice.pdf")
 print(result.doc_type)  # "invoice"
@@ -35,8 +35,8 @@ print(result.fields)    # {"vendor": "Acme Ltd", "total": "$1,200", "due_date": 
 ## Installation
 
 ```bash
-git clone https://github.com/your-username/docextract.git
-cd docextract
+git clone https://github.com/your-username/doc-miner.git
+cd doc-miner
 
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
@@ -61,7 +61,7 @@ result = extract("document.pdf", api_key="your_key_here")
 ## Usage
 
 ```python
-from docextract import extract
+from docminer import extract
 
 result = extract("contract.pdf")
 
@@ -92,8 +92,8 @@ pytest tests/ -v
 ## Project Structure
 
 ```
-docextract/
-├── src/docextract/
+doc-miner/
+├── src/docminer/
 │   ├── extractor.py        # main extract() function
 │   ├── models.py           # ExtractionResult dataclass
 │   ├── parsers/

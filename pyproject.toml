@@ -3,9 +3,9 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "docextract"
+name = "docminer"
 version = "0.1.0"
-description = "Extract key-value pairs from PDF and Word documents using free LLM"
+description = "Extract structured key-value data from any PDF or Word document using a free LLM"
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
