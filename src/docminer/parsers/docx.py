@@ -1,7 +1,10 @@
+"""Text extraction for Word (.docx) documents."""
+
 from docx import Document
 
 
 def extract_text(path: str) -> str:
+    """Extract paragraph and table text from a .docx file."""
     doc = Document(path)
     lines = [p.text for p in doc.paragraphs if p.text.strip()]
 

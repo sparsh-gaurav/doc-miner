@@ -1,7 +1,10 @@
+"""Text extraction for PDF documents."""
+
 import fitz  # PyMuPDF
 
 
 def extract_text(path: str) -> str:
+    """Extract text from every page of a PDF file."""
     doc = fitz.open(path)
     pages = [page.get_text() for page in doc]
     doc.close()
