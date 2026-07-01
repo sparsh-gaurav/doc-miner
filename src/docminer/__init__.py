@@ -1,3 +1,5 @@
+"""Extract structured key-value data from PDF and Word documents via Gemini."""
+
 from .extractor import extract
 from .models import ExtractionResult
 

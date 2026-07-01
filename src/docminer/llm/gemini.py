@@ -1,3 +1,5 @@
+"""Gemini-backed structured field extraction from document text."""
+
 import json
 import re
 
@@ -28,6 +30,7 @@ Document text:
 
 
 def extract_fields(text: str, api_key: str) -> ExtractionResult:
+    """Send document text to Gemini and parse the returned JSON into an ExtractionResult."""
     client = genai.Client(api_key=api_key)
 
     response = client.models.generate_content(

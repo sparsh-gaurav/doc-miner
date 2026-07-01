@@ -1,3 +1,5 @@
+"""Top-level document extraction entry point."""
+
 import os
 from pathlib import Path
 
