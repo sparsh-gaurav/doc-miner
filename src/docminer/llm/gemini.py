@@ -6,7 +6,7 @@ from google.genai import types
 
 from ..models import ExtractionResult
 
-MODEL = "gemini-2.0-flash"
+MODEL = "models/gemini-2.5-flash"
 
 PROMPT = """You are a document intelligence system specialized in financial documents.
 
